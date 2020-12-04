@@ -2,12 +2,14 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$/.." vcs="Git" />
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/TextToSpeechApp" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/biarescie" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/bnr100" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/krokapp-2.0" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/morsecode" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/razumnik2" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/schedule/xss-example" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/skladalnik-fraz" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/synthesizer" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/tts-online" vcs="Git" />

@@ -8,6 +8,6 @@ import retrofit2.http.Path;
 import retrofit2.http.Query;
 
 public interface JSONPlaceHolderApi {
-    @GET("/studentGroup/schedule")
+    @GET("studentGroup/schedule")
     public Call<Answer> getAnswerWithIDGroup(@Query("studentGroup")  int studentGroup);
 }

@@ -5,114 +5,108 @@ import com.google.gson.annotations.SerializedName;
 import java.util.List;
 
 public class Answer {
-    @SerializedName("employee")
-    private Employee employee;
-    @SerializedName("studentGroup")
+    private String employee;
+
     private studentGroup studentGroup;
-    @SerializedName("schedules")
+
     private List<Schedules> schedules;
-    @SerializedName("examSchedules")
-    private List<Schedules> examSchedules;
-    @SerializedName("todayDate")
+
+    private List<Schedule> examSchedules;
+
     private String todayDate;
-    @SerializedName("todaySchedules")
-    private List<Schedules> todaySchedules;
-    @SerializedName("tomorrowDate")
+
+    private List<Schedule> todaySchedules;
+
     private String tomorrowDate;
-    @SerializedName("tomorrowSchedules")
-    private List<Schedules> tomorrowSchedules;
-    @SerializedName("currentWeekNumber")
+
+    private List<Schedule> tomorrowSchedules;
+
     private int currentWeekNumber;
 
-    public Answer(Employee employee,
-                  com.example.schedule.data.studentGroup studentGroup,
-                  List<Schedules> schedules,
-                  List<Schedules> examSchedules,
-                  String todayDate,
-                  List<Schedules> todaySchedules,
-                  String tomorrowDate,
-                  List<Schedules> tomorrowSchedules,
-                  int currentWeekNumber) {
-        this.employee = employee;
-        this.studentGroup = studentGroup;
-        this.schedules = schedules;
-        this.examSchedules = examSchedules;
-        this.todayDate = todayDate;
-        this.todaySchedules = todaySchedules;
-        this.tomorrowDate = tomorrowDate;
-        this.tomorrowSchedules = tomorrowSchedules;
-        this.currentWeekNumber = currentWeekNumber;
-    }
+    private String dateStart;
 
-    public Employee getEmployee() {
-        return employee;
-    }
+    private String dateEnd;
 
-    public com.example.schedule.data.studentGroup getStudentGroup() {
-        return studentGroup;
-    }
+    private String sessionStart;
 
-    public List<Schedules> getSchedules() {
-        return schedules;
-    }
+    private String sessionEnd;
 
-    public List<Schedules> getExamSchedules() {
-        return examSchedules;
-    }
-
-    public String getTodayDate() {
-        return todayDate;
-    }
-
-    public List<Schedules> getTodaySchedules() {
-        return todaySchedules;
-    }
-
-    public String getTomorrowDate() {
-        return tomorrowDate;
-    }
-
-    public List<Schedules> getTomorrowSchedules() {
-        return tomorrowSchedules;
-    }
-
-    public int getCurrentWeekNumber() {
-        return currentWeekNumber;
-    }
-
-    public void setEmployee(Employee employee) {
+    public void setEmployee(String employee){
         this.employee = employee;
     }
-
-    public void setStudentGroup(com.example.schedule.data.studentGroup studentGroup) {
+    public String getEmployee(){
+        return this.employee;
+    }
+    public void setStudentGroup(studentGroup studentGroup){
         this.studentGroup = studentGroup;
     }
-
-    public void setSchedules(List<Schedules> schedules) {
+    public studentGroup getStudentGroup(){
+        return this.studentGroup;
+    }
+    public void setSchedules(List<Schedules> schedules){
         this.schedules = schedules;
     }
-
-    public void setExamSchedules(List<Schedules> examSchedules) {
+    public List<Schedules> getSchedules(){
+        return this.schedules;
+    }
+    public void setExamSchedules(List<Schedule> examSchedules){
         this.examSchedules = examSchedules;
     }
-
-    public void setTodayDate(String todayDate) {
+    public List<Schedule> getExamSchedules(){
+        return this.examSchedules;
+    }
+    public void setTodayDate(String todayDate){
         this.todayDate = todayDate;
     }
-
-    public void setTodaySchedules(List<Schedules> todaySchedules) {
+    public String getTodayDate(){
+        return this.todayDate;
+    }
+    public void setTodaySchedules(List<Schedule> todaySchedules){
         this.todaySchedules = todaySchedules;
     }
-
-    public void setTomorrowDate(String tomorrowDate) {
+    public List<Schedule> getTodaySchedules(){
+        return this.todaySchedules;
+    }
+    public void setTomorrowDate(String tomorrowDate){
         this.tomorrowDate = tomorrowDate;
     }
-
-    public void setTomorrowSchedules(List<Schedules> tomorrowSchedules) {
+    public String getTomorrowDate(){
+        return this.tomorrowDate;
+    }
+    public void setTomorrowSchedules(List<Schedule> tomorrowSchedules){
         this.tomorrowSchedules = tomorrowSchedules;
     }
-
-    public void setCurrentWeekNumber(int currentWeekNumber) {
+    public List<Schedule> getTomorrowSchedules(){
+        return this.tomorrowSchedules;
+    }
+    public void setCurrentWeekNumber(int currentWeekNumber){
         this.currentWeekNumber = currentWeekNumber;
+    }
+    public int getCurrentWeekNumber(){
+        return this.currentWeekNumber;
+    }
+    public void setDateStart(String dateStart){
+        this.dateStart = dateStart;
+    }
+    public String getDateStart(){
+        return this.dateStart;
+    }
+    public void setDateEnd(String dateEnd){
+        this.dateEnd = dateEnd;
+    }
+    public String getDateEnd(){
+        return this.dateEnd;
+    }
+    public void setSessionStart(String sessionStart){
+        this.sessionStart = sessionStart;
+    }
+    public String getSessionStart(){
+        return this.sessionStart;
+    }
+    public void setSessionEnd(String sessionEnd){
+        this.sessionEnd = sessionEnd;
+    }
+    public String getSessionEnd(){
+        return this.sessionEnd;
     }
 }

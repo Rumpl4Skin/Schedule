@@ -4,30 +4,31 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
-public class Schedules {
-    @SerializedName("weekDay")
+public class Schedules
+{
     private String weekDay;
-    @SerializedName("schedules")
-    private List<Schedule> schedules;
 
-    public Schedules(String weekDay, List<Schedule> schedules) {
+    private List<Schedule> schedule;
+
+    public Schedules(String weekDay, List<Schedule> schedule) {
         this.weekDay = weekDay;
-        this.schedules = schedules;
+        this.schedule = schedule;
     }
 
-    public String getWeekDay() {
-        return weekDay;
+    public Schedules(List<Schedule> schedule) {
+        this.schedule = schedule;
     }
 
-    public List<Schedule> getSchedules() {
-        return schedules;
-    }
-
-    public void setWeekDay(String weekDay) {
+    public void setWeekDay(String weekDay){
         this.weekDay = weekDay;
     }
-
-    public void setSchedules(List<Schedule> schedules) {
-        this.schedules = schedules;
+    public String getWeekDay(){
+        return this.weekDay;
+    }
+    public void setSchedule(List<Schedule> schedule){
+        this.schedule = schedule;
+    }
+    public List<Schedule> getSchedule(){
+        return this.schedule;
     }
 }

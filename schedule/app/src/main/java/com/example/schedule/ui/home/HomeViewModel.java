@@ -7,6 +7,9 @@ import androidx.lifecycle.ViewModel;
 
 import com.example.schedule.NetworkService;
 import com.example.schedule.data.Answer;
+import com.example.schedule.data.Schedule;
+
+import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -27,8 +30,11 @@ public class HomeViewModel extends ViewModel {
                     @Override
                     public void onResponse(@NonNull Call<Answer> call, @NonNull Response<Answer> response) {
                         Answer post = response.body();
+                        List<Schedule> list=post.getTodaySchedules();
 
-                        mText.setValue(post.getStudentGroup().getName() + "\n");
+                        mText.setValue(post.getStudentGroup().getName()
+                                + "\n"+list.get(0).getSubject()
+                                + "\n"+list.size());
                                 /*textView.append(post.getUserId() + "\n");
                                 textView.append(post.getTitle() + "\n");
                                 textView.append(post.getBody() + "\n");*/
@@ -37,7 +43,7 @@ public class HomeViewModel extends ViewModel {
                     @Override
                     public void onFailure(@NonNull Call<Answer> call, @NonNull Throwable t) {
 
-                        mText.setValue("Error occurred while getting request!");
+                        mText.setValue("Error occurred while getting request!"+ t.getMessage());
                         t.printStackTrace();
                     }
                 });

@@ -8,7 +8,7 @@ public class studentGroup {
 
     @NonNull
     @SerializedName("name")
-    private int name;
+    private String name;
     @SerializedName("facultyId")
     private int facultyId;
     @SerializedName("facultyName")
@@ -22,20 +22,20 @@ public class studentGroup {
     @SerializedName("id")
     private int id;
     @SerializedName("calendarId")
-    private int calendarId;
+    private String calendarId;
 
-    public studentGroup(int name) {
+    public studentGroup(String name) {
         this.name = name;
     }
 
-    public studentGroup(int name,
+    public studentGroup(String name,
                         int facultyId,
                         String facultyName,
                         int specialityDepartmentEducationFormId,
                         String specialityName,
                         int course,
                         int id,
-                        int calendarId) {
+                        String calendarId) {
         this.name = name;
         this.facultyId = facultyId;
         this.facultyName = facultyName;
@@ -46,7 +46,7 @@ public class studentGroup {
         this.calendarId = calendarId;
     }
 
-    public int getName() {
+    public String getName() {
         return name;
     }
 
@@ -74,7 +74,7 @@ public class studentGroup {
         return id;
     }
 
-    public int getCalendarId() {
+    public String getCalendarId() {
         return calendarId;
     }
 
@@ -97,16 +97,5 @@ public class studentGroup {
         return specialityName != null ? specialityName.equals(that.specialityName) : that.specialityName == null;
     }
 
-    @Override
-    public int hashCode() {
-        int result = name;
-        result = 31 * result + facultyId;
-        result = 31 * result + (facultyName != null ? facultyName.hashCode() : 0);
-        result = 31 * result + specialityDepartmentEducationFormId;
-        result = 31 * result + (specialityName != null ? specialityName.hashCode() : 0);
-        result = 31 * result + course;
-        result = 31 * result + id;
-        result = 31 * result + calendarId;
-        return result;
-    }
+
 }

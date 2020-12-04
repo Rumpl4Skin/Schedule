@@ -2,6 +2,8 @@ package com.example.schedule.data;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.util.List;
+
 public class Employee {
     @SerializedName("firstName")
     private String firstName;
@@ -16,7 +18,7 @@ public class Employee {
     @SerializedName("calendarId")
     private String calendarId;
     @SerializedName("academicDepartment")
-    private String academicDepartment;
+    private List<String> academicDepartment;
     @SerializedName("id")
     private int id;
     @SerializedName("fio")
@@ -34,7 +36,7 @@ public class Employee {
                     String rank,
                     String photoLink,
                     String calendarId,
-                    String academicDepartment,
+                    List<String> academicDepartment,
                     int id,
                     String fio,
                     String studentGroupModelList,
@@ -78,7 +80,7 @@ public class Employee {
         return calendarId;
     }
 
-    public String getAcademicDepartment() {
+    public List<String> getAcademicDepartment() {
         return academicDepartment;
     }
 
@@ -126,7 +128,7 @@ public class Employee {
         this.calendarId = calendarId;
     }
 
-    public void setAcademicDepartment(String academicDepartment) {
+    public void setAcademicDepartment(List<String> academicDepartment) {
         this.academicDepartment = academicDepartment;
     }
 
